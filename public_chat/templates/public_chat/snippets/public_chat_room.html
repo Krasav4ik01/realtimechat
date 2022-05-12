@@ -64,12 +64,17 @@
 }
 </style>
 
-{% if debug %}
+{% comment %} {% if debug %}
 PUBLIC CHAT
 {% endif %}
-<span class="{% if not debug %}d-none{% endif %} page-number" id="id_page_number">1</span>
+<span class="{% if not debug %}d-none{% endif %} page-number" id="id_page_number">1</span> {% endcomment %}
 
-<div class="card mt-3">
+
+
+
+
+<!-- 
+{% comment %} <div class="card mt-3">
 	<div class="card-header">
 		<div class="d-flex flex-row justify-content-between">
 			<h3 class="">Public Chat</h3>
@@ -99,7 +104,7 @@ PUBLIC CHAT
 			</div>
 		</div>
 	</div>
-</div>
+</div> {% endcomment %} -->
 
 <script type="text/javascript">
 	

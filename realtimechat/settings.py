@@ -89,6 +89,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'realtimechat.wsgi.application'
 ASGI_APPLICATION = 'realtimechat.routing.application'
+
 # CHANNEL_LAYERS = {
 #     'default': {
 #         'BACKEND': 'channels_redis.core.RedisChannelLayer',
@@ -98,19 +99,36 @@ ASGI_APPLICATION = 'realtimechat.routing.application'
 #     },
 # }
 
+
+
 CHANNEL_LAYERS = {
     'default': {
         'BACKEND': 'channels.layers.InMemoryChannelLayer',
-        'CONFIG': {
-            'hosts': [('127.0.0.1', 6379)],
-        }
+        # 'CONFIG': {
+        #     'hosts': [('127.0.0.1', 6379)],
+        # }
     }
 }
+
+
+# DB_NAME = "dbname"
+# DB_USER = "username"
+# DB_PASSWORD = "password"
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': DB_NAME,
+#         'USER': DB_USER,
+#         'PASSWORD': DB_PASSWORD,
+#         'HOST': 'localhost',
+#         'PORT': '5432',
+#     }
+# }
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
 DB_NAME = "orclpdb"
-DB_USER = "superuser"
+DB_USER = "superman"
 DB_PASSWORD = "123"
 DATABASES = {
     'default': {
@@ -188,4 +206,4 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media_cdn')
 
 TEMP = os.path.join(BASE_DIR, 'media_cdn/temp')
 
-BASE_URL = 'http://127.0.0.1:8000'
+BASE_URL = "http://127.0.0.1:8000"

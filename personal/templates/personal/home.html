@@ -1,15 +1,18 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<div class="container">
+<div class="">
 
 	<!-- MEDIUM+ SCREENS -->
-	<div class="main d-none d-md-flex flex-column">
-		<div class="card p-4 align-items-start">
+	<div class="">
+		
 
-			<h3 class="pb-4">Welcome to Chat!</h3>
+			<div class="wel"><span style="color: #cf7916;">We</span>lcome to <span style="color: #cf7916;">Ch</span>at!</div>
 			
-		</div>
+			<div class="link">
+				<span style="color: #cf7916;">Ex</span>pand your <span style="color: #cf7916;">ho</span>rizons! <br>
+				<a class="join" href="http://sdudormchat.pythonanywhere.com/public_chat/?username=anonym">Join</a>
+			</div>
 
 		{% include 'public_chat/snippets/public_chat_room.html' with room_id=room_id %}
 
@@ -28,6 +31,23 @@
 {% endblock content %}
 
 
+<style>
+	.wel{
+		position: absolute;
+		text-align: center;
+		justify-content: center;
+		align-items: center;
+		display: flex;
+		color: azure;
+	}
+	.link{
+		position: absolute;
+		text-align: center;
 
+	}
+	.join{
+		text-decoration: none;
+	}
+</style>
 
 
